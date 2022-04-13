@@ -1,0 +1,208 @@
+entries:
+- Name: '@azure/arm-keyvault-profile-2020-09-01-hybrid'
+  Version: 2.0.0
+  DisplayName: '@azure/arm-keyvault-profile-2020-09-01-hybrid'
+  ServiceName: Keyvault
+  VersionType: GA
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-keyvault-profile-2020-09-01-hybrid_2.0.0/sdk/keyvault/arm-keyvault-profile-2020-09-01-hybrid/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/arm-monitor-profile-2020-09-01-hybrid'
+  Version: 2.0.0
+  DisplayName: '@azure/arm-monitor-profile-2020-09-01-hybrid'
+  ServiceName: Monitor
+  VersionType: GA
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-monitor-profile-2020-09-01-hybrid_2.0.0/sdk/monitor/arm-monitor-profile-2020-09-01-hybrid/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/arm-databoxedge-profile-2020-09-01-hybrid'
+  Version: 2.0.0
+  DisplayName: '@azure/arm-databoxedge-profile-2020-09-01-hybrid'
+  ServiceName: Databoxedge
+  VersionType: GA
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-databoxedge-profile-2020-09-01-hybrid_2.0.0/sdk/databoxedge/arm-databoxedge-profile-2020-09-01-hybrid/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/schema-registry-avro'
+  Version: 1.0.0-beta.7
+  DisplayName: Avro
+  ServiceName: Schema Registry
+  VersionType: Beta
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/schema-registry-avro_1.0.0-beta.7/sdk/schemaregistry/schema-registry-avro/CHANGELOG.md
+  ChangelogContent: |-
+    #### Breaking Changes
+    - `AvroEncoder` has been renamed to `AvroSerializer`
+    - The `encodeMessageData` method has been renamed to `serializeMessageData`
+    - The `decodeMessageData` method has been renamed to `deserializeMessageData`
+- Name: '@azure/arm-dns-profile-2020-09-01-hybrid'
+  Version: 2.0.0
+  DisplayName: '@azure/arm-dns-profile-2020-09-01-hybrid'
+  ServiceName: Dns
+  VersionType: GA
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-dns-profile-2020-09-01-hybrid_2.0.0/sdk/dns/arm-dns-profile-2020-09-01-hybrid/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/event-hubs'
+  Version: 5.8.0-beta.2
+  DisplayName: Event Hubs
+  ServiceName: Event Hubs
+  VersionType: Beta
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/event-hubs_5.8.0-beta.2/sdk/eventhub/event-hubs/CHANGELOG.md
+  ChangelogContent: |-
+    #### Bugs Fixed
+
+    - `createEventDataAdapter` is updated so that `consumeMessage` returns the original binary payload instead of the Buffer representation of it.
+- Name: '@azure/synapse-artifacts'
+  Version: 1.0.0-beta.9
+  DisplayName: Artifacts
+  ServiceName: Synapse Analytics
+  VersionType: Beta
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/synapse-artifacts_1.0.0-beta.9/sdk/synapse/synapse-artifacts/CHANGELOG.md
+  ChangelogContent: |-
+    #### Features Added
+
+    Added more supported types in `LinkedServiceOperations`
+- Name: '@azure/arm-appservice-profile-2020-09-01-hybrid'
+  Version: 2.0.0
+  DisplayName: '@azure/arm-appservice-profile-2020-09-01-hybrid'
+  ServiceName: '@azure/arm-appservice-profile-2020-09-01-hybrid'
+  VersionType: GA
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-appservice-profile-2020-09-01-hybrid_2.0.0/sdk/appservice/arm-appservice-profile-2020-09-01-hybrid/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/arm-appplatform'
+  Version: 2.0.0-beta.4
+  DisplayName: Resource Management - App Platform
+  ServiceName: App Platform
+  VersionType: Beta
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/appplatform/arm-appplatform/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/arm-appconfiguration'
+  Version: 3.0.0-beta.2
+  DisplayName: Resource Management - App Configuration
+  ServiceName: App Configuration
+  VersionType: Beta
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/appconfiguration/arm-appconfiguration/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/arm-rediscache'
+  Version: 6.1.0
+  DisplayName: Resource Management - Redis Cache
+  ServiceName: Redis Cache
+  VersionType: GA
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/redis/arm-rediscache/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/arm-batch'
+  Version: 7.1.0
+  DisplayName: Resource Management - Batch
+  ServiceName: Batch
+  VersionType: GA
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/batch/arm-batch/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/arm-securityinsight'
+  Version: 1.0.0-beta.2
+  DisplayName: Resource Management - Securityinsight
+  ServiceName: Securityinsight
+  VersionType: Beta
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-securityinsight_1.0.0-beta.2/sdk/securityinsight/arm-securityinsight/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/arm-storagecache'
+  Version: 5.1.0
+  DisplayName: Resource Management - Storage Cache
+  ServiceName: Storage
+  VersionType: GA
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/storagecache/arm-storagecache/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/arm-appinsights'
+  Version: 5.0.0-beta.3
+  DisplayName: Resource Management - Application Insights
+  ServiceName: Application Insights
+  VersionType: Beta
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/applicationinsights/arm-appinsights/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/core-rest-pipeline'
+  Version: 1.7.0
+  DisplayName: Core - Client - Core Rest Pipeline
+  ServiceName: Other
+  VersionType: GA
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/core-rest-pipeline_1.7.0/sdk/core/core-rest-pipeline/CHANGELOG.md
+  ChangelogContent: |-
+    #### Bugs Fixed
+
+    - [Bug #20778](https://github.com/Azure/azure-sdk-for-js/pull/20778) Customers can provide abort signals in the options bags for the client libraries but they were not being checked when requests were being retried. The issue is fixed in [#20781](https://github.com/Azure/azure-sdk-for-js/pull/20781).
+    - Fixed a bug introduced on 1.4.0 that prevented the retry policies from throwing errors after all the retry steps are exhausted.
+    - Fixed a bug introduced on 1.4.0 that prevented the exponential retry policy to retry when the server answered with some expected errors.
+
+    #### Features Added
+
+    - Supports the `"retry-after-ms"` and `"x-ms-retry-after-ms"` headers along with the `"Retry-After"` header from throttling retry responses from the services. [#20817](https://github.com/Azure/azure-sdk-for-js/issues/20817)
+- Name: '@azure/arm-mysql-flexible'
+  Version: 2.0.0
+  DisplayName: '@azure/arm-mysql-flexible'
+  ServiceName: Mysql-Flexible
+  VersionType: GA
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-mysql-flexible_2.0.0/sdk/mysql/arm-mysql-flexible/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/identity'
+  Version: 2.1.0-beta.2
+  DisplayName: Identity
+  ServiceName: Identity
+  VersionType: Beta
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/identity_2.1.0-beta.2/sdk/identity/identity/CHANGELOG.md
+  ChangelogContent: |-
+    #### Bugs Fixed
+
+    - Fixed a bug that caused [Continuous Access Enforcement (CAE)](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-continuous-access-evaluation) and [Conditional Access authentication context](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/granular-conditional-access-for-sensitive-data-and-actions/ba-p/1751775) authentication to fail with newer versions of MSAL.
+
+    #### Features Added
+
+    - Added stronger types to the `DefaultAzureCredential` and `ManagedIdentityCredential` constructors so that TypeScript users will trigger a type error by providing both a Managed Identity client ID and resource ID to the same credential instance.
+    - Added stronger types to the `ClientCertificateCredential` and `OnBehalfOfCredential` constructors so that TypeScript users will trigger a type error by providing both a Client certificate and certificate path to the same credential instance.
+    - Added support for App Service 2019 resource in Managed Identity Credential.
+    - All of our credentials now support a new option on their constructor: `loggingOptions`, which allows configuring the logging options of the HTTP pipelines.
+    - Within the new `loggingOptions` we have also added `allowLoggingAccountIdentifiers`, a property that if set to true logs information specific to the authenticated account after each successful authentication, including: the Client ID, the Tenant ID, the Object ID of the authenticated user, and if possible the User Principal Name.
+- Name: '@azure/arm-containerservice'
+  Version: 15.2.0
+  DisplayName: Resource Management - Container Service
+  ServiceName: Container Service
+  VersionType: GA
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/containerservice/arm-containerservice/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/arm-app'
+  Version: 1.0.0-beta.1
+  DisplayName: Resource Management - App
+  ServiceName: App
+  VersionType: Beta
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/@azure/arm-app_1.0.0-beta.1/sdk/app/arm-app/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/arm-msi'
+  Version: 2.1.0-beta.1
+  DisplayName: Resource Management - Managed Service Identity
+  ServiceName: MSI
+  VersionType: Beta
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/msi/arm-msi/CHANGELOG.md
+  ChangelogContent: ""
+- Name: '@azure/arm-cdn'
+  Version: 7.0.0
+  DisplayName: Resource Management - Content Delivery Network
+  ServiceName: Content Delivery Network
+  VersionType: GA
+  Hidden: false
+  ChangelogUrl: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/cdn/arm-cdn/CHANGELOG.md
+  ChangelogContent: ""
+
