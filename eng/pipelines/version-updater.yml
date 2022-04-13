@@ -1,0 +1,101 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-2019'
+
+resources:
+  repositories:
+    - repository: azure-sdk-tools
+      type: github
+      name: Azure/azure-sdk-tools
+      endpoint: azure
+      ref: refs/tags/azure-sdk-tools_20210114.1
+
+steps:
+- checkout: self
+- checkout: azure-sdk-tools
+
+- task: PowerShell@2
+  displayName: Update packages from package manager
+  inputs:
+    pwsh: true
+    filePath: ./azure-sdk/eng/scripts/Query-Azure-Packages.ps1
+
+- task: PowerShell@2
+  displayName: Update packages from sdk release data
+  inputs:
+    pwsh: true
+    filePath: ./azure-sdk/eng/scripts/Update-Release-Versions.ps1
+    arguments: >
+      -github_pat '$(azuresdk-github-pat)'
+
+- task: PowerShell@2
+  displayName: Update release DevOps work-items
+  inputs:
+    pwsh: true
+    filePath: ./azure-sdk/eng/scripts/Update-DevOps-WorkItems.ps1
+    arguments: >
+      -github_pat '$(azuresdk-github-pat)'
+      -devops_pat '$(azuresdk-azure-sdk-devops-release-work-item-pat)'
+
+- template: eng/common/pipelines/templates/steps/create-pull-request.yml@azure-sdk-tools
+  parameters:
+    BaseBranchName: master
+    RepoName: azure-sdk
+    PRBranchName: PackageVersionUpdates
+    CommitMsg: "Update package index with latest published versions"
+    PRTitle: "Update package index with latest published versions"
+    PushArgs: -f
+    WorkingDirectory: $(System.DefaultWorkingDirectory)/azure-sdk
+    ScriptDirectory: $(System.DefaultWorkingDirectory)/azure-sdk-tools/eng/common/scripts
+    PRLabels: 'auto-merge'
+
+- pwsh: |
+    git clone https://$(azuresdk-github-pat)@github.com/MicrosoftDocs/azure-dev-docs-pr $(System.DefaultWorkingDirectory)/azure-dev-docs-pr
+  displayName: Clone azure-dev-docs-pr repo
+
+- task: PowerShell@2
+  displayName: Generate all package index markdown files
+  inputs:
+    pwsh: true
+    filePath: ./azure-sdk/eng/scripts/Generate-Package-Index.ps1
+    arguments: >
+      -outputFolder $(System.DefaultWorkingDirectory)/azure-dev-docs-pr/articles/includes/
+
+- template: eng/common/pipelines/templates/steps/create-pull-request.yml@azure-sdk-tools
+  parameters:
+    BaseBranchName: master
+    RepoOwner: MicrosoftDocs
+    RepoName: azure-dev-docs-pr
+    PRBranchName: PackageIndexUpdates
+    CommitMsg: "Update package index with latest published versions"
+    PRTitle: "Update package index with latest published versions"
+    PushArgs: -f
+    WorkingDirectory: $(System.DefaultWorkingDirectory)/azure-dev-docs-pr
+    ScriptDirectory: $(System.DefaultWorkingDirectory)/azure-sdk-tools/eng/common/scripts
+
+- pwsh: |
+    git clone https://github.com/dotnet/docs $(System.DefaultWorkingDirectory)/dotnet-docs
+  displayName: Clone dotnet docs repo
+
+- task: PowerShell@2
+  displayName: Generate dotnet package index markdown files
+  inputs:
+    pwsh: true
+    filePath: ./azure-sdk/eng/scripts/Generate-Package-Index.ps1
+    arguments: >
+      -language dotnet
+      -outputFolder $(System.DefaultWorkingDirectory)/dotnet-docs/docs/azure/includes/
+
+- template: eng/common/pipelines/templates/steps/create-pull-request.yml@azure-sdk-tools
+  parameters:
+    BaseBranchName: master
+    RepoOwner: dotnet
+    RepoName: docs
+    PRBranchName: PackageIndexUpdates
+    CommitMsg: "Update package index with latest published versions"
+    PRTitle: "Update package index with latest published versions"
+    PushArgs: -f
+    WorkingDirectory: $(System.DefaultWorkingDirectory)/dotnet-docs
+    ScriptDirectory: $(System.DefaultWorkingDirectory)/azure-sdk-tools/eng/common/scripts
