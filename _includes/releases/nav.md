@@ -1,0 +1,1 @@
+[.NET](#net) | [Java](#java) | [JavaScript/TypeScript](#javascript) | [Python](#python) | [C++](#c) | [Embedded C](#embedded-c) | [Android](#android) |[iOS](#ios) |
